@@ -1,0 +1,791 @@
+/* Import af poppings google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+
+}
+/*Scroll behaviour også brugt til navigation med navbar*/
+html{
+    scroll-behavior: smooth;
+}
+/*Baggrund og text*/
+body{
+    background: #080808;
+    color: #fff;
+}
+/*Baggrund billed pg1*/
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.png);  
+    background-size: cover;
+    background-position: center;
+}
+
+/* Changing job title function */
+.typing-text {
+    font-size: 30px;
+    font-weight: 500;
+    min-height: 40px;
+}
+
+.typing-text span {
+    position: relative;
+    color: #c0043f;
+}
+
+.typing-text span::before {
+    content: "Digital Leader";
+    animation: words 10s infinite;
+}
+
+.typing-text span::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-left: 2px solid #c0043f;
+    animation: cursor 0.6s infinite, typing 10s steps(20) infinite;
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes typing {
+    0%, 100% {
+        width: 0%;
+    }
+    50% {
+        width: 100%;
+    }
+}
+
+@keyframes words {
+    0% { content: "Entrepreneur"; }
+    20% { content: "Public Speaker"; }
+    40% { content: "Data Enthusiast"; }
+    60% { content: "Software Engineer"; }
+    80% { content: "Digital Transformation Manager"; }
+    100% { content: "Volunteer"; }
+  }
+
+
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Social media icons on pg1*/
+.social-icons-header {
+    margin-top: 20px;
+}
+
+.social-icons-header a {
+    text-decoration: none;
+    font-size: 75px;
+    color: #ababab; /* Adjust based on your background */
+    margin-left: 40px;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons-header a:hover {
+    color: #c0043f; /* e.g., LinkedIn blue */
+}
+
+
+.logo{
+    width: 140px;
+}
+/* Allignment af sektioner*/ 
+nav ul li{
+    display: inline-block;
+    list-style: none;   
+    margin: 10px 20px;
+}
+
+/* Sektionsspecficiationer*/ 
+nav ul li a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+
+/* Underline til sektioner*/ 
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #c0043f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.2s;
+}
+
+/* Underline animation til sektioner*/ 
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Introduktion*/ 
+.header{
+    margin-top: 15%;
+    font-size: 40px;
+}
+
+.header h1{
+    font-size: 130px;
+    margin: 40px;
+}
+
+.header h3{
+    font-size: 60px;
+    margin: 40px;
+}
+
+.header h1 span{
+    color: #c0043f;
+}
+
+
+/* Slideshow pg1.5 */
+
+.partner-section {
+    padding: 50px 0;
+    text-align: center;
+    background: #262626;
+}
+
+.partner-section h2 {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.logo-slider {
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(250px * 12); /* 6 logos * 2 (duplicate) */
+    animation: scroll 40s linear infinite;
+}
+
+.slide {
+    width: 250px;
+    margin: 0 60px; /* or even 80px for extra space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide img {
+    max-width: 250px;
+    max-height: 150px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.slide img:hover {
+    filter: grayscale(0%);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+
+
+
+/*------Om Mig pg2----*/
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+/*Her deles rækkerne fra pg2 op, så teksten og billedet er delt på hver deres side*/
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Venstre række */
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 25px;
+}
+/* About me tekst */
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+
+.tab-titles{
+    display:flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+/* Underline til sektioner ved pg2, ligesom i pg1*/
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #c0043f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.2s;
+}
+
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+
+}
+
+/* tekst pg2 */
+.tab-contents ul li i {
+    margin-right: 6px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+
+.tab-contents ul li span{
+    color: #b54769;
+    font: 14px;
+}
+
+/* tryk på, og fjern funktion på sektioner i pg2*/
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+
+
+/* Services på pg3*/
+#services{
+    padding: 30px 0;
+}
+
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+/* tekst baggrund på på pg3*/
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    /* Animations transition fra services-list div::hover på pg3*/
+
+    transition: background 0.5s, transform 0.5s;
+
+}
+
+/* Logo dimensiner på pg3*/
+.services-list div i{
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+/* Tekst dimensioner på pg3*/
+.services-list div h2{
+font-size: 40px;
+font-weight: 750;
+}
+
+/* Tekst dimensioner på pg3*/
+.services-list div h3{
+    font-size: 20px;
+    font-weight: 250;
+    margin-bottom: 15px;
+    }
+/* Tekst dimensioner på pg3*/
+.services-list div h4{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    }
+
+
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* animation på baggrundsfirkanter på pg3*/
+.services-list div:hover{
+    background:#c0043f;
+    transform:translateY(-10px);
+}
+
+
+/* Portfolio pg4 */
+#portfolio{
+    padding: 50px 0;
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+/* Container for each portfolio item */
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;         /* Keeps image zoom inside */
+    display: block;
+}
+
+/* Portfolio image */
+.work img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s ease;
+    z-index: 1;
+    position: relative;
+}
+
+/* Gradient overlay */
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0; /* Hidden by default */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #c0043f);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s ease;
+    z-index: 2; /* Ensures it's above the image */
+}
+
+/* Title inside gradient */
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* Button/Icon inside gradient */
+.layer a {
+    margin-top: 20px;
+    color: #c0043f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/* Hover zoom and layer reveal */
+.work:hover img {
+    transform: scale(1.2); /* Zooms in the image */
+}
+
+.work:hover .layer {
+    height: 100%; /* Makes the overlay cover entire work block */
+}
+
+
+/* See More knap på pg 4*/
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #c0043f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: #c0043f;
+}
+
+
+/* Kontakt mig pg5*/
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+
+/* Ikon Farver på logoer TV for indsæt tekst pg5*/
+.contact-left p i{
+    color: #c0043f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+/* Ikon mellemrum pg5*/
+.social-icons{
+    margin-top: 30px;
+}
+
+/* Ikon Farver for sociale medier pg5*/
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+/* hover effekt for pg4 for sociale medier ikoner*/
+.social-icons a:hover{
+    color: #c0043f;
+    transform: translateY(-5px);
+}
+
+/* . efter betyder at den har inheritance af btn*/
+.btn.btn2{
+    display: inline-block;
+    background: #c0043f;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+
+/* Timeline CSS for the design section */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');
+.design-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1f1f1f;
+  min-height: 100vh;
+  padding: 100px 0;
+  font-family: Jost;
+}
+
+.design {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.small-year {
+    font-size: 60%;
+    color: #ababab;
+    font-weight: normal;
+}
+/* Subtle zoom-in & fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Delay for each card using nth-child (optional) */
+  .timeline-content:nth-of-type(3n+1) {
+    animation-delay: 0.2s;
+  }
+  .timeline-content:nth-of-type(3n+2) {
+    animation-delay: 0.4s;
+  }
+  .timeline-content:nth-of-type(3n+3) {
+    animation-delay: 0.6s;
+  }
+  
+  /* Small year styling */
+  .small-year {
+    font-size: 60%;
+    color: #ababab;
+    font-weight: normal;
+  }
+  
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-content {
+    padding: 1.75rem;
+    background: #1f1f1f;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    border-radius: 6px;
+    color: white;
+    margin: 1rem;
+    margin-bottom: 20px;
+    transition: 0.4s ease;
+  }
+
+.timeline-component {
+  margin: 0px 20px 20px 20px;
+}
+
+.timeline-content:hover {
+    transform: scale(1.02);
+    border: 1px solid #c0043f;
+    box-shadow: 0 0 20px #c0043f;
+  }
+  
+
+@media screen and (min-width: 768px) {
+  .timeline {
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+  }
+  .timeline-middle {
+    position: relative;
+    background-image: linear-gradient(45deg, #F27121, #c0043f, #8A2387);
+    width: 5px;
+    height: 100%;
+  }
+  .main-middle {
+    opacity: 0;
+  }
+  .timeline-circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+
+
+
+/* CSS For mobile applikationer */
+nav .fa-bars, nav .fa-times {
+    display: none;
+}
+
+
+@media only screen and (max-width: 768px){
+    #header{
+        background-image: url(images/phone-background.png);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header h1 {
+        font-size: 40px; /* Previously 130px, now much smaller for mobile */
+        margin: 5px;
+    }
+    
+    .header h3 {
+        font-size: 20px; /* Previously 60px */
+        margin: 5px;
+    }
+    
+    .social-icons-header a {
+        font-size: 40px; /* Smaller than the default 75px */
+        margin: 5px;
+    }
+
+    .typing-text {
+        font-size: 10px; /* Smaller text animation size */
+    }
+    
+    nav .fa-bars, nav .fa-times {
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #c0043f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    /* Logo Slideshow Mobile Styles */
+.partner-section h2 {
+    font-size: 22px;
+}
+
+.logo-slider {
+    padding: 10px 0;
+}
+
+.slide-track {
+    gap: 10px;
+    width: auto;
+    animation: scroll 25s linear infinite;
+}
+
+.slide {
+    width: 120px;
+    margin: 0 10px;
+}
+
+
+
+.slide img {
+    max-width: 100px;
+    max-height: 60px;
+}
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+
+    
+}
+

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moiz Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+     <!-- Font Tekst 3rd party --> 
+    <script src="https://kit.fontawesome.com/66f46c0b69.js" crossorigin="anonymous"></script>
+    <!-- AOS Library CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+        <div class="container"> 
+            <nav>
+                <img src="images/Logo.png" data-aos="fade-right" class="logo">
+                <ul id="sidemenu">
+                    <!-- Sektioner --> 
+                    <li><a href="#header" data-aos="fade-left">Home</a></li>
+                    <li><a href="#about" data-aos="fade-left">About</a></li>
+                    <li><a href="#services" data-aos="fade-left">Reccomandations</a></li>
+                    <li><a href="#portfolio" data-aos="fade-left">Portfolio</a></li>
+                    <li><a href="#contact" data-aos="fade-left">Contact</a></li>
+                    <i class="fas fa-times" data-aos="fade-left" onclick="closemenu()"></i>
+                </ul>
+                 <!-- Kalder på klasse defineret i javascript  --> 
+                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header" data-aos="fade-right" data-aos-duration="2000">
+                <h1>Hi, It's <span><br>Moiz Khalil</span></h1>
+                <h3 class="typing-text">I'm a <span></span></h3>
+
+                <!-- Icons on pg1  --> 
+                <div class="social-icons-header">
+                    <a href="https://www.linkedin.com/in/moizf/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Marble5" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/moiz_fk/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Slideshow Sektion -->
+<div class="partner-section">
+    <h2>Driving Transformation With</h2>
+    <div class="logo-slider">
+        <div class="slide-track">
+            <!-- Indsæt dine logoer her -->
+            <div class="slide"><img src="images/Novo Nordisk.png" alt="Logo 1"></div>
+            <div class="slide"><img src="images/DTU.png" alt="Logo 2"></div>
+            <div class="slide"><img src="images/SaveTheChildren.png" alt="Logo 3"></div>
+            <div class="slide"><img src="images/Microsoft.png" alt="Logo 4"></div>
+            <div class="slide"><img src="images/Marble.png" alt="Logo 5"></div>
+            <div class="slide"><img src="images/SharkGaming.png" alt="Logo 6"></div>
+            <div class="slide"><img src="images/Sath.png" alt="Logo 7"></div>
+
+
+            
+            <!-- Duplicate for infinite loop effect -->
+            <div class="slide"><img src="images/Novo Nordisk.png" alt="Logo 1"></div>
+            <div class="slide"><img src="images/DTU.png" alt="Logo 2"></div>
+            <div class="slide"><img src="images/SaveTheChildren.png" alt="Logo 3"></div>
+            <div class="slide"><img src="images/Microsoft.png" alt="Logo 4"></div>
+            <div class="slide"><img src="images/Marble.png" alt="Logo 5"></div>
+            <div class="slide"><img src="images/SharkGaming.png" alt="Logo 6"></div>
+            <div class="slide"><img src="images/Sath.png" alt="Logo 7"></div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-------------Om Mig------------>
+<!-- pg2 --> 
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/Moiz_Blå.jpeg"data-aos="fade-right" data-aos-duration="2000" alt="Moiz Khalil">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title" data-aos="fade-left">About Me</h1>
+                <p>
+                    I strive to bridge the gap between data and leadership to drive meaningful, real-world impact. My work lies at the intersection of technology, strategy, and innovation - building solutions that are both technically robust and socially meaningful.
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Tech Stack')">Tech Stack</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    <p class="tab-links" onclick="opentab('Volunteering Experience')">Volunteering Experience</p>
+                </div>
+                <div class="tab-contents active-tab" id="Tech Stack">
+                    <ul>
+                        <li>
+                            <span>Object-Oriented Programming</span><br>
+                            <i class="fa-brands fa-java" title="Java"></i> Java &nbsp;&nbsp;
+                            <i class="fa-solid fa-c" title="C #">#</i> &nbsp;&nbsp;
+                            <i class="fa-brands fa-python" title="Python"></i> Python
+                        </li>
+                
+                        <li>
+                            <span>Front-End Development</span><br>
+                            <i class="fa-brands fa-js" title="JavaScript"></i> JavaScript &nbsp;&nbsp;
+                            <i class="fa-brands fa-react" title="React"></i> React &nbsp;&nbsp;
+                            <i class="fa-brands fa-html5" title="HTML5"></i> HTML5 &nbsp;&nbsp;
+                            <i class="fa-brands fa-css3-alt" title="CSS3"></i> CSS3
+                        </li>
+                
+                        <li>
+                            <span>UX / UI Design</span><br>
+                            Canva &nbsp;&nbsp;
+                            <i class="fa-brands fa-figma" title="Figma"></i> Figma
+                        </li>
+                
+                        <li>
+                            <span>Back-End Development</span><br>
+                            SQL &nbsp;&nbsp; Azure &nbsp;&nbsp; Node.js 
+                            <i class="fa-brands fa-node-js" title="Node.js"></i> &nbsp;&nbsp;
+                            <i class="fa-brands fa-aws" title="AWS"></i> AWS
+                        </li>
+                
+                        <li>
+                            <span>Tools & Platforms</span><br>
+                            <i class="fa-brands fa-github" title="GitHub"></i> GitHub &nbsp;&nbsp;
+                            VS Code &nbsp;&nbsp; IntelliJ IDEA &nbsp;&nbsp; Power BI &nbsp;&nbsp;
+                            Microsoft Office &nbsp;&nbsp; Jira / Azure DevOps
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>Harvard Business School – Summer 2024</span><br>
+                            Completed a summer program focused on Strategic Management, & Management consulting. ( GPA: 11 / 12 )
+                        </li>
+                    
+                        <li><span>DTU – BSc in Software Engineering</span><br>
+                            BSc in Software Engineering with a focus on Business & Leadership. ( GPA: ~9 / 12 ) <br>
+                            Reduced undergraduate by a year, meanwhile being ranked in top 10% of class.
+                        </li>
+                    
+                        <li><span>DTU – in Mechanical Engineering</span><br>
+                            Gained interdisciplinary experience in mechanical engineering principles, before dropping out to pursue software engineering.
+                        </li>
+                        <li><span>HTX Sukkertoppen</span><br>
+                            Studied Physics and Mathematics at HTX Sukkertoppen – Denmark’s largest technical high school – known for ranking in the top 5% nationally ( gpa: 10.06 / 12 ) <br>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Volunteering Experience">
+                    <ul>
+                        <li><span>Board Member - Minority Youth, Diversity & Inclusion</span><br>
+                            Organized events and initiatives to promote diversity and inclusion in the workplace, securing over 200,000 DKK in funding for community-driven projects.
+                            </li>
+                        <li><span>Board Member - Save The Child, Copenhagen</span><br>
+                            Served as a board member for Save the Children Youth in Copenhagen, overseeing project management and community engagement initiatives.
+                            </li>
+                        <li><span>Project leader - Save The Child Youth, 'Avnstrup Flygtningecenter' Project</span><br>
+                            Organized weekly and holiday activities for children at Avnstrup Refugee Center, securing over 80,000 DKK in event funding to improve their daily lives.
+                            </li>
+                            <li><span>Project leader - Save The Child Youth, 'Minority Children' Project</span><br>
+                            Facilitated inclusive social activities for minority-background children as part of the “Friendship Group” in Frederiksberg.
+                            </li>
+                        <li><span>Project leader - Save The Child Youth, 'Learning Café' Project</span><br>
+                            Increased student performance by 87% through structured tutoring sessions at the “Homework Café” at Lykkebo School.
+                            </li>
+                        <li><span>Member - DTU Management Council</span><br>
+                             Member of the DTU Management Council, Participating in 15+ case competitions, including Mckinsey, Boston consulting group, & Accenture
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-------------Work Experience------------>
+<!-- pg1.75 -->
+<div class="Timeline">
+    <div class="container">
+      <h1 class="sub-title" data-aos="fade-right" data-aos-duration="2000" >Work Experience</h1>
+      <div class="timeline">
+  
+        <div class="timeline-empty"></div>
+        <div class="timeline-middle"><div class="timeline-circle"></div></div>
+        <div class="timeline-component timeline-content fade-in">
+          <h2>Novo Nordisk <span class="small-year">2025</span></h2>
+          <h3>Digital Transformation Manager</h3>
+          <p>- Lead digital transformation initiatives in manufacturing science and development pilot projects.</p>
+        </div>
+  
+        <div class="timeline-component timeline-content fade-in">
+          <h2>Microsoft <span class="small-year">2025</span></h2>
+          <h3>Thesis – Data & AI</h3>
+          <p>- Designed a SaaS solution to deliver insights for agile project optimization. <br>
+            - Focused on BI and leadership. Collaborated with Microsoft, Novo Nordisk, and Demant</p>
+        </div>
+        <div class="timeline-middle"><div class="timeline-circle"></div></div>
+        <div class="timeline-empty"></div>
+  
+        <div class="timeline-empty"></div>
+        <div class="timeline-middle"><div class="timeline-circle"></div></div>
+        <div class="timeline-component timeline-content fade-in">
+          <h2>Novo Nordisk <span class="small-year">2024-2025</span></h2>
+          <h3>Student Data Analyst</h3>
+          <p>- Built digital ecosystems using Azure DevOps, Power Automate, and Python. <br>
+            - Led agile sprints, developed ETL pipelines, and delivered BI dashboards for sites across Hillerød, Gentofte & Kalundborg.</p>
+        </div>
+  
+        <div class="timeline-component timeline-content fade-in">
+          <h2>Marble <span class="small-year">2019–2025</span></h2>
+          <h3>Founder & CEO</h3>
+          <p>- Founded and scaled a tech firm offering PC hardware and software services. <br> 
+            - Sold 25% to Shark Gaming, for 120k DKK. <br>
+            - Managed over 150 B2B/B2C clients and sustained 41% annual growth.</p>
+        </div>
+        <div class="timeline-middle"><div class="timeline-circle"></div></div>
+        <div class="timeline-empty"></div>
+  
+        <div class="timeline-empty"></div>
+        <div class="timeline-middle"><div class="timeline-circle"></div></div>
+        <div class="timeline-component timeline-content fade-in">
+          <h2>DTU Compute <span class="small-year">2023-2024</span></h2>
+          <h3>Teaching Assistant</h3>
+          <p>Supported teaching in Mathematical Analysis, Linear Algebra, and Statistics. Recognized in top 2.1% of statistics results. Provided academic mentoring and technical assistance.</p>
+        </div>  
+      </div>
+    </div>
+  </div>
+
+<!-------------Services / Reccomandations------------>
+<div class="services" id="services">
+    <div class="container">
+        <h1 class="sub-title" data-aos="fade-right" data-aos-duration="2000">Recommandations</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-handshake-angle" data-aos="zoom-in" data-aos-duration="2000"></i>
+                <h2>Mckinsey & Co.</h2>
+                <h3>Md. Khalid Ph.D Statistics Professor At DTU & CBS</h3>
+                <h4>“Mr. Moiz is
+                    among the top 1 - 2% of the
+                    students with statistics foundation and R competence”
+                    </h4>
+                    <a href="#">Learn more</a>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-microchip" data-aos="zoom-in" data-aos-duration="2000"></i>
+                <h2>Demant CIO & VP</h2>
+                <h3>Md. Khalid Ph.D Statistics Professor At DTU & CBS</h3>
+                <h4>“Mr. Moiz is
+                    among the top 1 - 2% of the
+                    students with statistics foundation and R competence”
+                    </h4>
+                    <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-chart-simple" data-aos="zoom-in" data-aos-duration="2000"></i>
+                <h2>DTU Compute</h2>
+                <h3>Md. Khalid Ph.D Statistics Professor At DTU & CBS</h3>
+                <h4>“Mr. Moiz is
+                    among the top 1 - 2% of the
+                    students with statistics foundation and R competence”
+                    </h4>
+                    <a href="#">Learn more</a>
+            </div>
+
+
+ 
+
+        </div>
+    </div>
+</div>
+<!-------------My Projects------------>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title" data-aos="fade-right" data-aos-duration="2000">Portfolio</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/Screenshot_1.png" alt="Advisory Board" data-aos="zoom-in" data-aos-duration="2000">
+                <div class="layer">
+                    <h3>Board Member</h3>
+                    <p>I have served as a board member for Save the Children Youth in Copenhagen, as well as for a diversity and inclusion organization based in Copenhagen, Vestegnen focused on increasing civic engagement and community-driven initiatives. <br><br>
+                        I was involved in building the foundation of the organization from the ground up and organizing events that have collectively generated over 200,000 DKK in value. <br>
+
+                        <br>As a board member of Save the Children Youth, I acted as a volunteer project manager for three initiatives: a program at Avnstrup Refugee Center, a homework café at Lykkebo School, and a friendship group in Frederiksberg. 
+                        <br><br>I participated in weekly events and activities, managing a total budget of over 370,000 DKK across the projects.
+                        <br><br>
+                        Due to my dedication and impact, I was selected by the board to serve as an ambassador, presenting the value of volunteer work at high schools across the region.
+                        In the photo, I am giving a speech at the Glyptoteket in front of 500 people, addressing the importance of diversity and inclusion.</p>
+                        <a href="https://www.dansketaler.dk/taler/khalil-moiz" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                </div>
+            </div>
+            
+            <div class="work">
+                <img src="images/Pokedex.png" data-aos="zoom-in" data-aos-duration="2000">
+                <div class="layer">
+                    <h3>Pokedex App</h3>
+                    <p>The Pokédex app was built to serve as a streamlined hub for all things Pokémon. With such a rich and expansive universe, 
+                        the goal was to create an intuitive and visually engaging experience that organizes Pokémon data in a meaningful way. <br><br>
+                        This project was developed in collaboration with Shape — an award-winning mobile app agency behind apps for brands like 
+                        TV 2, LEGO, Ørsted, Arla, and Nykredit.</p>
+                        <a href="#" class=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="images/Zygo.png" alt="Zygo" data-aos="zoom-in" data-aos-duration="2000">
+                <div class="layer">
+                    <h3>Zygo - Agile Dashboards</h3>
+                    <p>For my thesis project, I collaborated with Microsoft, Novo Nordisk, and Demant to develop a data-driven solution that enhances agile project management through advanced analytics. <br><br> The objective was to bridge the gap between agile frameworks and measurable performance outcomes within software engineering teams.
+                        The solution involved the design and implementation of end-to-end data pipelines that extracted, transformed, and visualized key agile metrics—such as sprint velocity, burndown rates, team predictability, and cycle times. <br><br>By integrating data from tools like Azure DevOps and Jira, the system provided real-time insights into team dynamics, productivity trends, and bottlenecks.
+                        This project addressed several critical business challenges, including the need for standardized performance tracking, proactive sprint planning, and leadership alignment in agile environments. <br><br>It enabled stakeholders to make evidence-based decisions, increased transparency across teams, and supported continuous improvement strategies.
+                        The final product included interactive dashboards and automated reporting tools, empowering project managers and team leads with actionable insights. <br><br>It also laid the foundation for predictive analytics to forecast sprint outcomes and resource allocation needs.
+                        Overall, the solution delivered tangible value by transforming raw agile data into strategic assets—improving collaboration, delivery efficiency, and project visibility across all three organizations.</p>
+                        <a href="#" class=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn" data-aos="zoom-in" data-aos-duration="2000">See more</a>
+    </div>
+</div>
+
+
+<!-- Library af Ikoner https://fontawesome.com/icons -->
+<!-- Kontakt Mig -->
+<div class="contact" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title" data-aos="fade-right" data-aos-duration="2000">Contact Me</h1>
+          <p><i class="fa-solid fa-paper-plane" data-aos="fade-right" data-aos-duration="2000"></i>  moiz_fareeha@hotmail.com</p>
+          <!-- <p><i class="fa-solid fa-phone"></i>  12345678</p>  -->
+          <div class="social-icons" data-aos="fade-right" data-aos-duration="2000">
+            <a href="https://www.linkedin.com/in/moizf/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Marble5" target="_blank">
+              <i class="fa-brands fa-square-github"></i>
+            </a>
+            <a href="https://www.instagram.com/moiz_fk/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+          </div>
+          <!-- <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a> -->
+        </div>
+        <div class="contact-right">
+            <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <input type="number" name="Number" placeholder="Your number" required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+                <span id="form-msg"></span> <!-- Feedback message placeholder -->
+              </form>
+          </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Moiz. </p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+<!-------------Javascript------------>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+
+
+<!-------------Javascript for åben lunk funktion af menu på mobile applikationer------------>
+<script>
+    
+    var sidemenu=document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+
+</script>
+<!-------------Google apps API til Excel Sheet------------>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwnFVGf9EFnb_ND87uLWyHv7AQYF2iyuveHkJvxqmAaIk3YyPMg1d8PezunrztXeSd6/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById("form-msg");
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          msg.innerHTML = "Message sent successfully!";
+          msg.style.color = "lightgreen";
+          form.reset(); // Clear form
+          setTimeout(() => msg.innerHTML = "", 5000); // Hide after 5 seconds
+        })
+        .catch(error => {
+          msg.innerHTML = "Something went wrong. Please try again.";
+          msg.style.color = "red";
+        });
+    });
+  </script>
+  
+<!-- AOS Library JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,  // Animation duration in ms
+    once: true       // Animation occurs only once while scrolling down
+  });
+</script>
+
+
+</body>
+</html>
