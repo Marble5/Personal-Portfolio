@@ -784,37 +784,100 @@ nav .fa-bars, nav .fa-times {
     margin: 0 10px;
 }
 
-@media only screen and (max-width: 768px) {
-    .scaled-mobile-wrapper {
-        transform: scale(0.4); /* Adjust the scale as needed */
-        transform-origin: top center;
-    }
-}
-
 .slide img {
     max-width: 100px;
     max-height: 60px;
 }
-    .sub-title{
+
+.timeline-wrapper {
+    width: 100%;             /* takes full width */
+    max-width: 900px;        /* or whatever width you want on desktop */
+    margin: 0 auto;          /* center horizontally */
+    padding: 0 1rem;         /* optional: add horizontal padding on small screens */
+    box-sizing: border-box;  /* ensures padding doesn't cause overflow */
+}
+/* Force desktop timeline layout on all screen sizes */
+.timeline {
+    display: grid;
+    grid-template-columns: 1fr 5px 1fr;
+    width: 100vw;           /* full viewport width */
+    margin-left: -50px;              /* no auto centering */
+    padding: 0;             /* no padding */
+    gap: 0;                 /* optional: remove space between columns */
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .timeline-middle {
+    background-image: linear-gradient(45deg, #f24b21, #c0043f, #8A2387);
+    width: 5px;
+    position: relative;
+  }
+  
+  .timeline-circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+  }
+  
+  .timeline-component {
+    margin: 10px 0px 30px 0px;           /* removed left and right margin */
+    padding: 1rem 1.25rem;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .timeline-right {
+  }
+  .timeline-left {
+  }
+
+  .timeline-empty {
+    display: block;
+  }
+  #portfolio .work h3 {
+    font-size: 14px;
+}
+
+#portfolio .layer {
+    font-size: 11px;
+    padding: 0 15px;
+}
+
+#portfolio .layer a {
+    font-size: 14px;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+}
+.sub-title{
         font-size: 40px;
     }
-    .about-col-1, .about-col-2{
+.about-col-1, .about-col-2{
         flex-basis: 100%;
     }
-    .about-col-1{
+.about-col-1{
         margin-bottom: 30px;
     }
-    .about-col-2{
+.about-col-2{
         font-size: 14px;
     }
-    .tab-links{
+.tab-links{
         font-size: 16px;
         margin-right: 20px;
     }
-    .contact-left, .contact-right{
+.contact-left, .contact-right{
         flex-basis: 100%;
     }
-    .copyright{
+.copyright{
         font-size: 14px;
     }
 
