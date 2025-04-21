@@ -22,7 +22,7 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(images/background.png);  
+    background-image: url(./images/background.png);  
     background-size: cover;
     background-position: center;
 }
@@ -146,18 +146,20 @@ nav ul li a:hover::after {
 
 /* Introduktion*/ 
 .header{
-    margin-top: 15%;
+    margin-top: 5%;
     font-size: 40px;
 }
 
 .header h1{
     font-size: 130px;
     margin: 40px;
+    margin-left: -20px;
 }
 
 .header h3{
     font-size: 60px;
     margin: 40px;
+    margin-left: -20px;
 }
 
 .header h1 span{
@@ -643,10 +645,23 @@ form btn2{
 
 .timeline-content:hover {
     transform: scale(1.02);
-    border: 1px solid #c0043f;
-    box-shadow: 0 0 20px #c0043f;
+    background-color: #1f1f1f; /* Ensures background stays visible */
+    border: 2px solid #c0043f;
+    box-shadow: 0 0 15px #c0043f, 0 0 25px #8A2387;
+    transition: all 0.4s ease-in-out;
   }
-  
+
+  @keyframes glowAura {
+    0% {
+      box-shadow: 0 0 10px #c0043f, 0 0 20px #8A2387;
+    }
+    50% {
+      box-shadow: 0 0 20px #8A2387, 0 0 30px #c0043f;
+    }
+    100% {
+      box-shadow: 0 0 10px #c0043f, 0 0 20px #8A2387;
+    }
+  }
 
 @media screen and (min-width: 768px) {
   .timeline {
@@ -655,7 +670,7 @@ form btn2{
   }
   .timeline-middle {
     position: relative;
-    background-image: linear-gradient(45deg, #F27121, #c0043f, #8A2387);
+    background-image: linear-gradient(45deg, #f24b21, #c0043f, #8A2387);
     width: 5px;
     height: 100%;
   }
@@ -676,9 +691,9 @@ form btn2{
 }
 
 
-
-
 /* CSS For mobile applikationer */
+
+/* Manglende for work experience og ned indtil før kontakt */
 nav .fa-bars, nav .fa-times {
     display: none;
 }
@@ -736,7 +751,20 @@ nav .fa-bars, nav .fa-times {
         left: 25px;
         cursor: pointer;
     }
-
+    .logo{
+        width: 140px;
+        margin-top: 30px;
+        margin-left: -40px;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: -30px;
+        margin-right: -10px;
+    }
+    
     /* Logo Slideshow Mobile Styles */
 .partner-section h2 {
     font-size: 22px;
@@ -757,7 +785,12 @@ nav .fa-bars, nav .fa-times {
     margin: 0 10px;
 }
 
-
+@media only screen and (max-width: 768px) {
+    .scaled-mobile-wrapper {
+        transform: scale(0.4); /* Adjust the scale as needed */
+        transform-origin: top center;
+    }
+}
 
 .slide img {
     max-width: 100px;
