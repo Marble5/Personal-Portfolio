@@ -29,7 +29,7 @@
             </nav>
             <div class="header" data-aos="fade-right" data-aos-duration="2000">
                 <h1>Hi, It's <span><br>Moiz Khalil</span></h1>
-                <h3 class="typing-text">I'm a <span></span></h3>
+                <h3 class="typing-text">I'm <span class="article">a</span> <span class="role"></span></h3>
 
                 <!-- Icons on pg1  --> 
                 <div class="social-icons-header">
@@ -232,7 +232,7 @@
         <div class="timeline-component timeline-content fade-in">
           <h2>DTU Compute <span class="small-year">2023-2024</span></h2>
           <h3>Teaching Assistant</h3>
-          <p>Supported teaching in Mathematical Analysis, Linear Algebra, and Statistics. Recognized in top 2.1% of statistics results. Provided academic mentoring and technical assistance.</p>
+          <p>- Supported teaching in Mathematical Analysis, Linear Algebra, and Statistics. <br>- Recognized in top 2.1% of statistics results. <br>- Provided strategic academic guidance to support student success and foster independent problem-solving.</p>
         </div>  
       </div>
     </div>
@@ -257,7 +257,7 @@
             <div>
                 <i class="fa-solid fa-microchip" data-aos="zoom-in" data-aos-duration="2000"></i>
                 <h2>Demant CIO & VP</h2>
-                <h3>Md. Khalid Ph.D Statistics Professor At DTU & CBS</h3>
+                <h3>Christian Pedersen, Former Consultant at BCG</h3>
                 <h4>“Mr. Moiz is
                     among the top 1 - 2% of the
                     students with statistics foundation and R competence”
@@ -434,6 +434,37 @@
     duration: 1000,  // Animation duration in ms
     once: true       // Animation occurs only once while scrolling down
   });
+</script>
+
+<!-- Typing effect for roles in start -->
+<script>
+  const roles = [
+    "Entrepreneur",
+    "Public Speaker",
+    "Data Enthusiast",
+    "Software Engineer",
+    "Digital Transformation Manager",
+    "Volunteer"
+  ];
+
+  const roleElement = document.querySelector(".role");
+  const articleElement = document.querySelector(".article");
+
+  let index = 0;
+
+  function updateTypingText() {
+    const role = roles[index];
+    roleElement.textContent = role;
+
+    const firstLetter = role.trim().charAt(0).toLowerCase();
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    articleElement.textContent = vowels.includes(firstLetter) ? "an" : "a";
+
+    index = (index + 1) % roles.length;
+  }
+
+  updateTypingText();
+  setInterval(updateTypingText, 3000); // Change role every 3s
 </script>
 
 
