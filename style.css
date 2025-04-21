@@ -22,7 +22,7 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(./images/background.png);  
+    background-image: url(./images/Background.png);  
     background-size: cover;
     background-position: center;
 }
@@ -93,6 +93,7 @@ nav{
 /* Social media icons on pg1*/
 .social-icons-header {
     margin-top: 20px;
+    margin-left: -60px;
 }
 
 .social-icons-header a {
@@ -722,6 +723,11 @@ nav .fa-bars, nav .fa-times {
         margin: 5px;
     }
 
+    .social-icons-header {
+        margin-top: 20px;;
+        margin-left: 0px;
+    }
+    
     .typing-text {
         font-size: 10px; /* Smaller text animation size */
     }
